@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - UDOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Include header.html -->
+    <header>
+        <img src="img/logo.png" alt="UDOM Logo">
+        <h1>UDOM</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contacts</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="application.html">Application</a>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <h2>Departments</h2>
+            <ul>
+                <li><a href="#">IDS</a></li>
+                <li><a href="#">HIS</a></li>
+                <li><a href="#">BI</a></li>
+            </ul>
+        </div>
+        <div class="center">
+            <h2>Gallery</h2>
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="img/image1.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="img/image2.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="img/image3.jpg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="img/image4.jpg" alt="Image 4">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h2>News & Events</h2>
+            <ul>
+                <li><a href="https://news.google.com" target="_blank">news.google.com</a></li>
+                <li><a href="https://www.eventbrite.com" target="_blank">www.eventbrite.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Include footer.html -->
+    <div class="footer">
+        <p>&copy; 2024 UDOM</p>
+        <p>Designed by: Alfred Ngonyani</p>
+    </div>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === slideIndex) {
+                    slide.classList.add('active');
+                }
+            });
+            slideIndex = (slideIndex + 1) % slides.length;
+        }
+
+        setInterval(showSlides, 2000); // Change image every 2 seconds
+    </script>
+</body>
+</html>
